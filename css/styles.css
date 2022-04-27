@@ -1,0 +1,684 @@
+/** Importation de la police externe Montserrat **/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/** Définition de la police personnalisé FarFromHomecoming **/
+@font-face { 
+	font-family: "FarFromHomecoming";  
+	src: url("../fonts/FarFromHomecoming.woff2") format("woff2"); 
+}
+
+/** Réinitialisation des bordures et des marges de tous les éléments HTML **/
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	border: 0;
+}
+
+/** Définition des variables pour les couleurs et les propriétés qui seront réutilisées **/
+:root {
+	--primary-color: #b11313;
+	--secondary-color: #f1c530;
+	--third-color: #114c92;
+	--black-color: #000000;
+	--white-color: #ffffff;
+}
+
+/** Définition des styles généraux **/
+h1 {
+	font-family: 'FarFromHomecoming';
+	font-weight: normal;
+	font-size: 32px;
+	color: var(--white-color);
+}
+
+h2 {
+	font-family: 'montserrat';
+	font-weight: bold;
+	font-size: 20px;
+	color: var(--white-color);
+}
+
+h3 {
+	font-family: 'montserrat';
+	font-weight: bolder;
+	font-size: 20px;
+	color: var(--white-color);
+}
+
+h4, h5 {
+	font-family: 'montserrat';
+	font-weight: 500;
+	font-size: 16px;
+	color: var(--white-color);
+}
+
+p, button {
+	font-family: 'montserrat';
+	font-weight: normal;
+	font-size: 14px;
+}
+
+/** Boutons **/
+.plain-btn {
+	padding: 1em 2em;
+	background-color: var(--white-color);
+	border-radius: 15px;
+	color: var(--primary-color);
+	font-weight: 600;
+	margin-right: 2em;
+	cursor: pointer;
+}
+
+.transparent-btn {
+	padding: 1em 2em;
+	background-color: transparent;
+	border: 1px solid var(--white-color);
+	border-radius: 15px;
+	color: var(--white-color);
+	font-weight: normal;
+	cursor: pointer;
+}
+
+/** Navigation **/
+nav {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 0 auto;
+	z-index: 10;
+	background-color: var(--primary-color);
+}
+
+nav .container {
+	width: 80%;
+	padding: 1em;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav .container ul {
+	display: flex;
+	align-items: flex-end;
+	gap: 0 4em;
+	list-style: none;
+}
+
+.navigation li>a {
+	color: var(--white-color);
+	font-family: 'montserrat';
+	font-weight: 600;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 1em 2em;
+}
+
+.logo .img2 {
+	height: fit-content;
+}
+
+/** Fin Navigation **/
+
+/** Contenu principal **/
+.main-container {
+	display: flex;
+	flex-direction: column;
+}
+
+/** Premier bloc (Hero 1)  **/
+.hero-1 {
+	background: url('../assets/images/img1.png');
+	width: 100%;
+	height: 870px;
+	padding: 20em 13em;
+	display: flex;
+	flex-direction: column;
+}
+
+.hero-1 .logo-hero {
+	display: none;
+}
+
+.hero-1 h1 {
+	color: var(--white-color);
+	margin-bottom: 2em;
+}
+
+.hero-1 p {
+	font-family: 'montesserat';
+	color: var(--white-color);
+}
+
+div.btn-group {
+	margin-bottom: 1em;
+}
+
+/** Cards **/
+.card-container {
+	background-color: var(--primary-color);
+	padding: 10em 13em;
+	color: var(--white-color);
+	display: flex;
+	flex-direction: column;
+}
+
+.card-container .card-header {
+	margin-top: -12em;
+	padding-bottom: 2em;;
+}
+
+.card-container:only-child {
+	padding-top: 5em;
+}
+
+.cards {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-element {
+	flex-basis: 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 40em;
+}
+
+.card-element .card-content {
+	text-align: justify;
+}
+
+.card-content ul {
+	list-style: none;
+}
+
+.card-header p {
+	width: 50%;
+}
+
+.card-header h1 {
+	padding-bottom: .5em;
+}
+
+.card-content ul li {
+	padding-left: .6em;
+}
+
+.card-content ul li::before {
+  content: ".";
+  padding-right: .6em;
+}
+
+/** Deuxième bloc (Hero-2) **/
+.hero-2 {
+	background: var(--third-color) url('../assets/images/img5.png') no-repeat;
+	height: 554px;
+	padding-left: 50em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero-2 .hero-header {
+	color: var(--white-color);
+	text-align: right;
+	margin-bottom: 1em;
+}
+
+.hero-2 .inscription {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.inscription input {
+	width: 25em;
+	margin: .5em 0;
+	border: 2px solid var(--black-color);
+	border-radius: 100px;
+	padding: .5em 1em;
+}
+
+.inscription-btn {
+	margin-top: 3em;
+	padding: 1em 4em;
+	background-color: transparent;
+	border: 2px solid var(--white-color);
+	border-radius: 15px;
+	color: var(--white-color);
+	cursor: pointer;
+}
+
+/** Troisième bloc (Hero-3) **/
+.hero-3 {
+	background-image: url('../assets/images/img6.png');
+	background-color: var(--primary-color) ;
+	background-repeat: no-repeat;
+  background-position: 132% 100%;
+	height: 840px;
+	padding-left: 10em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.hero-3 .hero-header {
+	color: var(--white-color);
+	text-align: left;
+	margin-bottom: 3em;
+	width: 40%;
+}
+
+.hero-3 .newsletter {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: start;
+	color: var(--white-color);
+}
+
+.newsletter input[type='text'] {
+	width: 25em;
+	background-color: transparent;
+	margin: .5em 0;
+	border: 2px solid var(--white-color);
+	border-radius: 100px;
+	padding: .5em 1em;
+}
+
+.newsletter input[type='checkbox'] {
+	width: 1em;
+	border: 1px solid var(--black-color);
+}
+
+.newsletter input::placeholder {
+	color: var(--white-color);
+}
+
+.newsletter button.newsletter-btn {
+	align-self: start;
+	margin-top: 5em;
+	margin-left: 5em;
+}
+
+.newsletter span {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+}
+
+.newsletter .text-confidential {
+	width: 75%;
+	padding: 1em;
+}
+
+.newsletter .text-confidential a {
+	color: var(--white-color);
+}
+
+/** Contenu principal **/
+
+/** Footer **/
+.footer {
+	height: 300px;
+	background-color: var(--black-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	color: var(--white-color);
+}
+
+.logo-footer {
+	display: flex;
+	align-items: center;
+	gap: 1em 1em;
+}
+
+.footer ul {
+	display: flex;
+	align-items: center;
+	gap: 0 4em;
+	list-style: none;
+}
+
+.footer ul li>a {
+	color: var(--white-color);
+	font-family: 'montserrat';
+	font-weight: normal;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.langue-btn {
+	display: flex;
+	justify-content: space-between;
+	padding: .5em 1.5em;
+	width: 13em;
+	background-color: var(--primary-color);
+	border-radius: 100px;
+	color: var(--white-color);
+	margin-right: 2em;
+	text-align: left;
+	cursor: pointer;
+}
+
+.langue-btn .chevron-down {
+	background: url('../assets/icons/chevron-down-solid.svg') no-repeat top right;
+	background-size: contain;
+	height: 1em;
+	width: 1em;
+}
+
+.langue-btn-mobile {
+	display: none;
+}
+
+.menu-footer {
+	margin: 3em 0;
+}
+
+.footer li>a {
+	color: var(--white-color);
+	font-family: 'montserrat';
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.socials li img {
+	background-color: var(--primary-color);
+	padding: .3em;
+	border-radius: 100%;
+}
+
+.logo-footer-mobile {
+	display: none;
+}
+
+ul.socials {
+	gap: 0 1em;
+}
+
+audio {
+	margin-top: 2em;
+}
+
+/** Footer **/
+
+/*********************************/
+/** Styles pour les smartphones **/
+@media only screen and (max-width: 768px) {
+	
+	/** Boutons **/
+	.plain-btn {
+		border-radius: 100px;
+		margin-right: 1em;
+	}
+
+	.transparent-btn {
+		border-radius: 100px;
+	}
+	
+	nav {
+		display: none;
+	}
+
+	.hero-1 {
+		background: url('../assets/images/img1.png') no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: 460px;
+		padding: 6em 10em;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.hero-1 .logo-hero {
+		display: block;
+		margin-bottom: 3em;
+	}
+
+	.hero-1 h1 {
+		order: 1;
+		margin-bottom: .5em;
+	}
+
+	.hero-1 h3 {
+		order: 2;
+		font-size: 14px;
+		margin-bottom: 1.5em;
+	}
+
+	.hero-1 .btn-group {
+		order: 3;
+	}
+
+	/** Cards **/
+	.card-container {
+		padding: 5em;
+	}
+
+	.card-container .card-header {
+		margin-top: 0;
+		padding-bottom: 2em;;
+		text-align: center;
+	}
+
+	.cards {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	.card-element {
+		flex-basis: 90%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		height: 34em;
+		margin-bottom: 5em;
+	}
+	
+	.card-element:last-of-type .card-content{
+		margin-top: 3em;
+		margin-bottom: 2em;
+	}
+
+	.card-element .card-content {
+		text-align: center;
+	}
+	
+	.card-element .plain-btn {
+		margin-top: 0em;
+	}
+
+	.card-header p {
+		width: 100%;
+	}
+
+	/** Deuxième bloc (Hero-2) **/
+	.hero-2 {
+		padding: 5em 2em;
+		height: 770px;
+		display: flex;
+		background-size: cover;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.hero-2 .hero-header {
+		color: var(--white-color);
+		text-align: center;
+	}
+
+	.hero-2 .inscription {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.inscription input {
+		margin: .5em 0;
+		border: 2px solid var(--black-color);
+		border-radius: 100px;
+		padding: .5em 1em;
+	}
+
+	.inscription-btn {
+		border-radius: 100px;
+	}
+
+	/** Troisième bloc (Hero-3) **/
+	.hero-3 {
+		background-image: url('../assets/images/img6.png');
+		background-color: var(--primary-color) ;
+		background-repeat: no-repeat;
+		background-size: 28em;
+		background-position: left 155% top 110%;
+		height: auto;
+		padding: 3em 2em;
+		align-items: center;
+	}
+
+	.hero-3 .hero-header {
+		color: var(--white-color);
+		text-align: center;
+		margin-bottom: 3em;
+		width: 100%;
+	}
+
+	.hero-3 .newsletter {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: start;
+		color: var(--white-color);
+	}
+
+	.newsletter input[type='text'] {
+		width: 25em;
+		background-color: transparent;
+		margin: .5em 0;
+		border: 2px solid var(--white-color);
+		border-radius: 100px;
+		padding: .5em 1em;
+	}
+
+	.newsletter input[type='checkbox'] {
+		width: 1em;
+		border: 1px solid var(--black-color);
+	}
+
+	.newsletter input::placeholder {
+		color: var(--white-color);
+	}
+
+	.newsletter button.newsletter-btn {
+		align-self: start;
+		margin-top: 5em;
+		margin-left: 5em;
+	}
+
+	.newsletter span {
+		display: flex;
+		align-items: center;
+		justify-content: start;
+	}
+
+	.newsletter .text-confidential {
+		width: 75%;
+		padding: 1em;
+	}
+
+	.newsletter .text-confidential a {
+		color: var(--white-color);
+	}
+
+	/** Footer **/
+	.footer {
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.footer ul.menu-footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+		list-style: none;
+		gap: .5em 0;
+		align-self: flex-start;
+		padding: 2em 5em;
+	}
+
+	.footer ul li>a {
+		color: var(--white-color);
+		font-family: 'montserrat';
+		font-weight: normal;
+		font-size: 16px;
+		text-decoration: none;
+	}
+
+	.langue-btn {
+		display: none;
+	}
+
+	.langue-btn-mobile {
+		display: flex;
+		justify-content: space-between;
+		align-self: flex-end;
+		padding: 1em 1.5em;
+		width: 13em;
+		background-color: var(--primary-color);
+		border-radius: 100px;
+		color: var(--white-color);
+		margin-right: 2em;
+		text-align: left;
+		cursor: pointer;
+		position: relative;
+		bottom: 15em;
+	}
+	
+	.langue-btn-mobile .chevron-down {
+		background: url('../assets/icons/chevron-down-solid.svg') no-repeat top right;
+		background-size: contain;
+		height: 1em;
+		width: 1em;
+	}
+
+	.menu-footer {
+		margin: 3em 0;
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.logo-footer {
+		display: none;
+	}
+
+	.logo-footer-mobile {
+		display: block;
+		margin: -5em 0 3em;
+	}
+
+	ul.socials {
+		gap: 0 1em;
+		margin-bottom: 1em;
+	}
+}
